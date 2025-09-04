@@ -22,39 +22,47 @@ export const navLinks = [
 ];
 
 export const clientReviews = [
+  // {
+  //   id: 1,
+  //   name: 'Preksha Mahajan',
+  //   position: 'Ex-Community Lead at Open Source Chandigarh',
+  //   img: 'reviews/preksha.jpeg',
+  //   linkedin: 'https://www.linkedin.com/in/preksha-mahajan-090359214/',
+  //   review:
+  //     'Gurmehak is a very skilled individual. Her role as a Technical Team Member under Open Source vertical has made a significant impact to our projects, events and team dynamics. She possesses a deep understanding of various programming languages and software development methodologies. I have no doubt that she will continue to excel and make substantial contributions in any future endeavors she undertakes. It is with great pleasure that I highly recommend Gurmehak for any position or opportunity that aligns with her skills and aspirations.',
+  // },
   {
     id: 1,
-    name: 'Preksha Mahajan',
-    position: 'Ex-Community Lead at Open Source Chandigarh',
-    img: 'reviews/preksha.jpeg',
-    linkedin: 'https://www.linkedin.com/in/preksha-mahajan-090359214/',
+    name: 'Jane Doe',
+    position: 'CEO of Acme Corp',
+    img: 'assets/review1.png',
     review:
-      'Gurmehak is a very skilled individual. Her role as a Technical Team Member under Open Source vertical has made a significant impact to our projects, events and team dynamics. She possesses a deep understanding of various programming languages and software development methodologies. I have no doubt that she will continue to excel and make substantial contributions in any future endeavors she undertakes. It is with great pleasure that I highly recommend Gurmehak for any position or opportunity that aligns with her skills and aspirations.',
+      'Working with Gurmehak was a fantastic experience. She took our vision and turned it into a beautiful, functional website that perfectly represents our brand. Her attention to detail and dedication to quality is unmatched. Highly recommended!',
   },
-  // {
-  //   id: 2,
-  //   name: 'Mark Rogers',
-  //   position: 'Founder of TechGear Shop',
-  //   img: 'assets/review2.png',
-  //   review:
-  //     'Gurmehak expertise in web development is truly impressive. She delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. She’s a true professional! Fantastic work.',
-  // },
-  // {
-  //   id: 3,
-  //   name: 'John Dohsas',
-  //   position: 'Project Manager at UrbanTech ',
-  //   img: 'assets/review3.png',
-  //   review:
-  //     'I can’t say enough good things about Gurmehak. She was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-  // },
-  // {
-  //   id: 4,
-  //   name: 'Ether Smith',
-  //   position: 'CEO of BrightStar Enterprises',
-  //   img: 'assets/review4.png',
-  //   review:
-  //     'Gurmehak was a pleasure to work with. She understood our requirements perfectly and delivered a website that exceeded our expectations. Her skills in both frontend backend dev are top-notch.',
-  // },
+  {
+    id: 2,
+    name: 'Mark Rogers',
+    position: 'Founder of TechGear Shop',
+    img: 'assets/review2.png',
+    review:
+      'Gurmehak expertise in web development is truly impressive. She delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. She’s a true professional! Fantastic work.',
+  },
+  {
+    id: 3,
+    name: 'John Dohsas',
+    position: 'Project Manager at UrbanTech ',
+    img: 'assets/review3.png',
+    review:
+      'I can’t say enough good things about Gurmehak. She was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+  },
+  {
+    id: 4,
+    name: 'Ether Smith',
+    position: 'CEO of BrightStar Enterprises',
+    img: 'assets/review4.png',
+    review:
+      'Gurmehak was a pleasure to work with. She understood our requirements perfectly and delivered a website that exceeded our expectations. Her skills in both frontend backend dev are top-notch.',
+  },
 ];
 
 export const myProjects = [

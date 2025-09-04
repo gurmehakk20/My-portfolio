@@ -6,7 +6,6 @@ import Alert from '../components/Alert.jsx';
 
 const Contact = () => {
   const formRef = useRef();
-
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
 
@@ -20,18 +19,22 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    const templateParams = {
+  request_type: "Contact",
+  from_name: form.name,
+  from_email: form.email,
+  message: form.message,
+  to_name: "Gurmehak",
+  to_email: "gurmehak.codes@gmail.com",
+};
+
+
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: 'JavaScript Mastery',
-          from_email: form.email,
-          to_email: 'sujata@jsmastery.pro',
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -44,12 +47,8 @@ const Contact = () => {
 
           setTimeout(() => {
             hideAlert(false);
-            setForm({
-              name: '',
-              email: '',
-              message: '',
-            });
-          }, [3000]);
+            setForm({ name: '', email: '', message: '' });
+          }, 3000);
         },
         (error) => {
           setLoading(false);
@@ -60,7 +59,7 @@ const Contact = () => {
             text: "I didn't receive your message 😢",
             type: 'danger',
           });
-        },
+        }
       );
   };
 
@@ -69,16 +68,24 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
 
       <div className="relative min-h-[70vh] sm:min-h-screen flex items-center justify-center flex-col">
-        <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 w-full h-full object-cover" />
+        <img
+          src="/assets/terminal.png"
+          alt="terminal-bg"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
         <div className="contact-container">
           <h3 className="head-text">Let's talk</h3>
           <p className="text-lg text-white-600 mt-3">
-            Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
-            life, I’m here to help.
+            Whether you’re looking to build a new website, improve your existing platform,
+            or bring a unique project to life, I’m here to help.
           </p>
 
-          <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="mt-12 flex flex-col space-y-7"
+          >
             <label className="space-y-3">
               <span className="field-label">Full Name</span>
               <input
@@ -120,8 +127,11 @@ const Contact = () => {
 
             <button className="field-btn" type="submit" disabled={loading}>
               {loading ? 'Sending...' : 'Send Message'}
-
-              <img src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow" />
+              <img
+                src="/assets/arrow-up.png"
+                alt="arrow-up"
+                className="field-btn_arrow"
+              />
             </button>
           </form>
         </div>

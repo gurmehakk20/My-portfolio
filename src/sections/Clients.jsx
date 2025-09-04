@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 
 // EmailJS env variables
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const FEEDBACK_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_FEEDBACK_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 // Cloudinary env variables
@@ -58,7 +58,6 @@ const Clients = () => {
     try {
       let imageUrl = "";
 
-      // If user uploaded an image → send to Cloudinary first
       if (formData.img) {
         imageUrl = await uploadImageToCloudinary(formData.img);
       }
@@ -66,12 +65,19 @@ const Clients = () => {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
-        linkedin: formData.linkedin,
         review: formData.review,
-        image_url: imageUrl, // sent to your EmailJS template
+        linkedin: formData.linkedin || "",
+        image_url: imageUrl || "",
+        to_name: "Gurmehak",
+        to_email: "gurmehak.codes@gmail.com",
       };
 
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+      await emailjs.send(
+        SERVICE_ID,
+        FEEDBACK_TEMPLATE_ID, // ✅ Feedback-specific template
+        templateParams,
+        PUBLIC_KEY
+      );
 
       alert("✅ Feedback sent successfully!");
       setIsOpen(false);
@@ -93,7 +99,7 @@ const Clients = () => {
 
   return (
     <section className="c-space my-20">
-      <h3 className="head-text">Endorsements & Feedback</h3>
+      <h3 className="head-text">What People Say</h3>
 
       {/* Existing Reviews */}
       <div className="client-container">
@@ -119,7 +125,6 @@ const Clients = () => {
                           className="ml-1 inline-block"
                           aria-label="LinkedIn Profile"
                         >
-                          {/* LinkedIn Icon */}
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="18"
@@ -159,9 +164,9 @@ const Clients = () => {
       <div className="mt-10 flex justify-center">
         <button
           onClick={() => setIsOpen(true)}
-          className="px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+          className="px-6 py-2 rounded-lg bg-blue-300 text-blue hover:bg-blue-700 transition"
         >
-          Add Feedback
+          Share Your Thoughts
         </button>
       </div>
 
