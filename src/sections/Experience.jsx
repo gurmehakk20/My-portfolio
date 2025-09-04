@@ -15,7 +15,7 @@ const WorkExperience = () => {
           <div className="work-canvas flex items-center justify-center relative overflow-hidden min-h-[220px] sm:min-h-[280px]">
             {!activeVideo  ? (
               <img
-                src="assets/logo-black-nobg.png" // 👉 replace with your logo file path
+                src="/assets/logos/logo-black-nobg.png" // 👉 replace with your logo file path
                 alt="Placeholder Logo"
                 className="w-full h-full object-contain p-6 cursor-pointer"
                 

@@ -35,7 +35,7 @@ export const clientReviews = [
     id: 1,
     name: 'Jane Doe',
     position: 'CEO of Acme Corp',
-    img: 'assets/review1.png',
+    img: '/assets/Clients/review1.png',
     review:
       'Working with Gurmehak was a fantastic experience. She took our vision and turned it into a beautiful, functional website that perfectly represents our brand. Her attention to detail and dedication to quality is unmatched. Highly recommended!',
   },
@@ -43,7 +43,7 @@ export const clientReviews = [
     id: 2,
     name: 'Mark Rogers',
     position: 'Founder of TechGear Shop',
-    img: 'assets/review2.png',
+    img: '/assets/Clients/review2.png',
     review:
       'Gurmehak expertise in web development is truly impressive. She delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. She’s a true professional! Fantastic work.',
   },
@@ -51,7 +51,7 @@ export const clientReviews = [
     id: 3,
     name: 'John Dohsas',
     position: 'Project Manager at UrbanTech ',
-    img: 'assets/review3.png',
+    img: '/assets/Clients/review3.png',
     review:
       'I can’t say enough good things about Gurmehak. She was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
   },
@@ -59,7 +59,7 @@ export const clientReviews = [
     id: 4,
     name: 'Ether Smith',
     position: 'CEO of BrightStar Enterprises',
-    img: 'assets/review4.png',
+    img: '/assets/Clients/review4.png',
     review:
       'Gurmehak was a pleasure to work with. She understood our requirements perfectly and delivered a website that exceeded our expectations. Her skills in both frontend backend dev are top-notch.',
   },
@@ -67,39 +67,39 @@ export const clientReviews = [
 
 export const myProjects = [
   {
-    title: 'Podcastr - AI Podcast Platform',
-    desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
-    subdesc:
-      'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-    texture: '/textures/project/project1.mp4',
-    logo: '/assets/project-logo1.png',
+    title: 'Floralia- Florist E-commerce Platform',
+    desc: 'Floralia is a beautifully designed e-commerce platform dedicated to florists. It offers a seamless shopping experience with features like product browsing, detailed flower descriptions, and a secure checkout process. Allows users to explore, like and purchase a wide variety of floral pots with ease.',
+    
+    href: 'https://floralia.vercel.app/',
+    texture: '/Projects/Videos/floralia.mp4',
+    logo: '/Projects/Logos/floralia.png',
     logoStyle: {
-      backgroundColor: '#2A1816',
-      border: '0.2px solid #36201D',
-      boxShadow: '0px 0px 60px 0px #AA3C304D',
+      backgroundColor: '#ffc9dbff', // Off-white background
+      border: '0.2px solid #F57CA5', // Pink border
+      boxShadow: '0px 0px 60px 0px #F57CA54D', // Soft pink glow
     },
-    spotlight: '/assets/spotlight1.png',
+
+    spotlight: '/Projects/Spotlight/spotlight1.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/react.svg',
+        path: '/assets/logos/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/logos/tailwindcss.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'Javascript',
+        path: '/assets/logos/javascript.svg',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Figma',
+        path: '/assets/logos/figma.svg',
       },
     ],
   },
@@ -109,34 +109,34 @@ export const myProjects = [
     subdesc:
       'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
     href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-    texture: '/textures/project/project2.mp4',
-    logo: '/assets/project-logo2.png',
+    texture: '/Projects/textures/project/project2.mp4',
+    logo: '/Projects/Logos/project-logo2.png',
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
     },
-    spotlight: '/assets/spotlight2.png',
+    spotlight: '/Projects/Spotlight/spotlight2.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/react.svg',
+        path: '/assets/logos/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/logos/tailwindcss.png',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/assets/typescript.png',
+        path: '/assets/logos/javascript.svg',
       },
       {
         id: 4,
         name: 'Framer Motion',
-        path: '/assets/framer.png',
+        path: '/assets/logos/framer.png',
       },
     ],
   },
@@ -146,8 +146,8 @@ export const myProjects = [
     subdesc:
       'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
     href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-    texture: '/textures/project/project3.mp4',
-    logo: '/assets/project-logo3.png',
+    texture: '/Projects/textures/project/project3.mp4',
+    logo: '/Projects/Logos/project-logo3.png',
     logoStyle: {
       backgroundColor: '#60f5a1',
       background:
@@ -155,27 +155,27 @@ export const myProjects = [
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
-    spotlight: '/assets/spotlight3.png',
+    spotlight: '/Projects/Spotlight/spotlight3.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/react.svg',
+        path: '/assets/logos/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/logos/tailwindcss.png',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/assets/typescript.png',
+        path: '/assets/logos/javascript.svg',
       },
       {
         id: 4,
         name: 'Framer Motion',
-        path: '/assets/framer.png',
+        path: '/assets/logos/framer.png',
       },
     ],
   },
@@ -185,34 +185,34 @@ export const myProjects = [
     subdesc:
       'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
     href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    texture: '/textures/project/project4.mp4',
-    logo: '/assets/project-logo4.png',
+    texture: '/Projects/textures/project/project4.mp4',
+    logo: '/Projects/Logos/project-logo4.png',
     logoStyle: {
       backgroundColor: '#0E1F38',
       border: '0.2px solid #0E2D58',
       boxShadow: '0px 0px 60px 0px #2F67B64D',
     },
-    spotlight: '/assets/spotlight4.png',
+    spotlight: '/Projects/Spotlight/spotlight4.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/react.svg',
+        path: '/assets/logos/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/logos/tailwindcss.png',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/assets/typescript.png',
+        path: '/assets/logos/javascript.svg',
       },
       {
         id: 4,
         name: 'Framer Motion',
-        path: '/assets/framer.png',
+        path: '/assets/logos/framer.png',
       },
     ],
   },
@@ -222,34 +222,34 @@ export const myProjects = [
     subdesc:
       'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
     href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-    texture: '/textures/project/project5.mp4',
-    logo: '/assets/project-logo5.png',
+    texture: '/Projects/textures/project/project5.mp4',
+    logo: '/Projects/Logos/project-logo5.png',
     logoStyle: {
       backgroundColor: '#1C1A43',
       border: '0.2px solid #252262',
       boxShadow: '0px 0px 60px 0px #635BFF4D',
     },
-    spotlight: '/assets/spotlight5.png',
+    spotlight: '/Projects/Spotlight/spotlight5.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/react.svg',
+        path: '/assets/logos/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/logos/tailwindcss.png',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/assets/typescript.png',
+        path: '/assets/logos/javascript.svg',
       },
       {
         id: 4,
         name: 'Framer Motion',
-        path: '/assets/framer.png',
+        path: '/assets/logos/framer.png',
       },
     ],
   },
@@ -274,7 +274,7 @@ export const workExperiences = [
     duration: 'July 2024 - Dec 2024',
     title: "During my internship, I contributed to designing and developing multiple core webpages for a gourmet snacks platform, focusing on creating a visually appealing interface and smooth user navigation. I collaborated with a team of 12 amazing developers, aligning design and functionality with brand goals, which helped improve user engagement and overall satisfaction.",
     icon: '/assets/logos/onesnack-logo.png',
-    video: '/Videos/onesnack.mp4',
+    video: '/Projects/Videos/onesnack.mp4',
   },
   {
     id: 2,
@@ -283,7 +283,7 @@ export const workExperiences = [
     duration: 'Sept 2023 - June 2024',
     title: "I contributed to organizing and supporting multiple open-source-focused events, engaging over 100 participants. I assisted in conducting workshops on Git and GitHub, helping attendees improve their version control proficiency, and participated in initiatives that promoted awareness and active involvement in open-source practices.",
     icon: '/assets/logos/osc-logo.jpg',
-    video: '/Videos/OSC.mp4',
+    video: '/Projects/Videos/OSC.mp4',
 
   },
   

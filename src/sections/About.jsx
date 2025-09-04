@@ -125,7 +125,7 @@ const About = () => {
           onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
         >
           <img
-            src="/assets/gurmehak-cartoon.png"
+            src="/assets/bgs/gurmehak-cartoon.png"
             alt="profile"
             className="rounded-xl aspect-[4/3] h-500 h-full object-cover object-[50%_25%]"
           />
@@ -167,13 +167,13 @@ const About = () => {
 
         {/* Globe */}
         <div
-          className="col-span-1 xl:row-span-4 hover-border-glow px-6 flex flex-col items-center justify-center"
+          className="col-span-1 xl:row-span-4 hover-border-glow px-7 py-3 flex flex-col items-center justify-center"
           onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
           onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
         >
           <Globe
-            height={340}
-            width={340}
+            height={300}
+            width={300}
             backgroundColor="rgba(0, 0, 0, 0)"
             // backgroundImageOpacity={0.5}
             showGraticules={true}
@@ -184,14 +184,14 @@ const About = () => {
               { lat: 40, lng: -100, text: "Chandigarh, India", color: "white", size: 15 },
             ]}
           />
-          <div className="mt-4 text-center space-y-2">
+          <div className="mt-4 text-center ">
             <p className="text-lg font-semibold text-white">
               I’m very flexible with time zone communications & locations
             </p>
             <p className="text-sm">
               I&apos;m based in Chandigarh, India and open to remote work worldwide.
             </p>
-            <Button name="Contact Me" isBeam containerClass="w-[80%] mt-10" />
+            <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
           </div>
         </div>
 
@@ -204,7 +204,7 @@ const About = () => {
   {/* Top Banner Image */}
   <div
     className="h-60 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-    style={{ backgroundImage: "url('/assets/dev.png')" }}
+    style={{ backgroundImage: "url('/assets/bgs/dev.png')" }}
   ></div>
 
   {/* Gradient Overlay on Image */}
@@ -239,7 +239,7 @@ const About = () => {
   onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
 >
   <img
-    src="/assets/grid4.png"
+    src="/assets/bgs/grid4.png"
     alt="contact-banner"
     className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top rounded-lg"
   />
@@ -254,7 +254,7 @@ const About = () => {
       onClick={handleCopy}
     >
       <img
-        src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"}
+        src={hasCopied ? "/assets/icons/tick.svg" : "/assets/icons/copy.svg"}
         alt="copy"
         className="w-4 h-4"
       />

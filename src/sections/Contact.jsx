@@ -69,7 +69,7 @@ const Contact = () => {
 
       <div className="relative min-h-[70vh] sm:min-h-screen flex items-center justify-center flex-col">
         <img
-          src="/assets/terminal.png"
+          src="/assets/bgs/terminal.png"
           alt="terminal-bg"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -128,7 +128,7 @@ const Contact = () => {
             <button className="field-btn" type="submit" disabled={loading}>
               {loading ? 'Sending...' : 'Send Message'}
               <img
-                src="/assets/arrow-up.png"
+                src="/assets/icons/arrow-up.png"
                 alt="arrow-up"
                 className="field-btn_arrow"
               />

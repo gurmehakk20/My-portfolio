@@ -173,7 +173,7 @@ const Clients = () => {
 
       {/* Feedback Form Modal */}
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/60">
+        <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-2000 ">
           <div className="bg-white rounded-2xl p-6 w-full max-w-lg relative">
             <button
               onClick={() => setIsOpen(false)}
