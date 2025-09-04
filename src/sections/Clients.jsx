@@ -65,6 +65,7 @@ const Clients = () => {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
+        position: formData.position,
         review: formData.review,
         linkedin: formData.linkedin || "",
         image_url: imageUrl || "",
@@ -196,6 +197,15 @@ const Clients = () => {
                 name="email"
                 placeholder="Your Email"
                 value={formData.email}
+                onChange={handleChange}
+                required
+                className="border rounded-lg p-2"
+              />
+              <input
+                type="text"
+                name="position"
+                placeholder="Your Designation/Position (optional)"
+                value={formData.position}
                 onChange={handleChange}
                 required
                 className="border rounded-lg p-2"
