@@ -207,7 +207,7 @@ const Clients = () => {
                 placeholder="Your Designation/Position (optional)"
                 value={formData.position}
                 onChange={handleChange}
-                required
+                
                 className="border rounded-lg p-2"
               />
               <input
