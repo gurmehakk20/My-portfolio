@@ -68,8 +68,8 @@ const Contact = () => {
     <section className="c-space my-20" id="contact">
       {alert.show && <Alert {...alert} />}
 
-      <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-screen" />
+      <div className="relative min-h-[70vh] sm:min-h-screen flex items-center justify-center flex-col">
+        <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 w-full h-full object-cover" />
 
         <div className="contact-container">
           <h3 className="head-text">Let's talk</h3>

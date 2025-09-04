@@ -167,7 +167,7 @@ const About = () => {
 
         {/* Globe */}
         <div
-          className="col-span-1 xl:row-span-4 hover-border-glow p-6 flex flex-col items-center justify-center"
+          className="col-span-1 xl:row-span-4 hover-border-glow px-6 flex flex-col items-center justify-center"
           onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
           onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
         >
@@ -191,7 +191,7 @@ const About = () => {
             <p className="text-sm">
               I&apos;m based in Chandigarh, India and open to remote work worldwide.
             </p>
-            <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+            <Button name="Contact Me" isBeam containerClass="w-[80%] mt-10" />
           </div>
         </div>
 
@@ -215,7 +215,7 @@ const About = () => {
     <h2 className="text-2xl font-bold">
       My Passion for Coding
     </h2>
-    <div className="w-16 h-[3px] bg-cyan-400 mt-2 rounded-full"></div>
+    <div className="w-16 h-[2px] bg-cyan-400 mt-2 rounded-full"></div>
     <p className="mt-3 text-sm text-gray-200 leading-relaxed">
       I love solving problems and building things through code.
       Programming isn&apos;t just my profession — it&apos;s my passion.

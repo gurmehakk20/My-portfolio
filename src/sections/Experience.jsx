@@ -12,7 +12,7 @@ const WorkExperience = () => {
 
         <div className="work-container">
           {/* LEFT SIDE (Video instead of Developer Canvas) */}
-          <div className="work-canvas flex items-center justify-center relative overflow-hidden">
+          <div className="work-canvas flex items-center justify-center relative overflow-hidden min-h-[220px] sm:min-h-[280px]">
             {!activeVideo  ? (
               <img
                 src="assets/logo-black-nobg.png" // 👉 replace with your logo file path

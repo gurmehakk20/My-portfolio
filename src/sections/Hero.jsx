@@ -24,9 +24,9 @@ const Hero = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
-  <section className="min-h-screen w-full flex flex-col md:flex-row relative bg-gradient-to-b from-[#0a0a0a] to-[#111111]" id="home">
+  <section className="min-h-[85vh] md:min-h-screen w-full flex flex-col md:flex-row relative bg-gradient-to-b from-[#0a0a0a] to-[#111111] pt-24 sm:pt-0" id="home">
     {/* Left Section - Text */}
-    <div className="flex-1 flex flex-col justify-center items-start z-10 px-8 md:px-20 space-y-4 md:space-y-6">
+    <div className="flex-1 flex flex-col justify-center items-start z-10 px-6 sm:px-8 md:px-20 space-y-4 md:space-y-6">
 
       {/* Headline */}
       <p className="sm:text-4xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 font-generalsans leading-snug">
@@ -44,7 +44,7 @@ const Hero = () => {
       </p>
 
       {/* Button */}
-      <a href="#about" className="mt-6">
+      <a href="#about" className="mt-6 w-full sm:w-auto">
         <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
       </a>
 
@@ -52,7 +52,7 @@ const Hero = () => {
 
 
     {/* Right Section - 3D Model */}
-    <div className="flex-1 flex justify-center items-center z-0 pointer-events-none">
+    <div className="flex-1 flex justify-center items-center z-0 pointer-events-none min-h-[320px] sm:min-h-[420px] md:min-h-[unset]">
       <Canvas style={{ height: '100%', width: '100%' }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1.2}  color="#aaffff" castShadow />
