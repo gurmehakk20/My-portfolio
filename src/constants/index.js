@@ -105,7 +105,7 @@ export const myProjects = [
   },
   {
     title: 'ILMKOSH - Online Book Store Web-app',
-    desc: 'ILMKOSH is an innovative online book store web application that offers a vast collection of books across various genres. Users can easily browse, search, and publisj books through a user-friendly interface.',
+    desc: 'ILMKOSH is an innovative online book store web application that offers a vast collection of books across various genres. Users can easily browse, search, and publish books through a user-friendly interface.',
     subdesc:
       'Built using MERN stack (MongoDB, Express.js, React.js, Node.js) and TailwindCSS, ILMKOSH provides a seamless and engaging experience for book lovers.',
     href: 'https://ilm-kosh.netlify.app/',
@@ -126,13 +126,23 @@ export const myProjects = [
       },
       {
         id: 3,
-        name: 'TypeScript',
+        name: 'Javascript',
         path: '/assets/logos/javascript.svg',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/logos/framer.png',
+        name: 'Express.js',
+        path: '/assets/logos/express.png',
+      },
+      {
+        id: 5,
+        name: 'Node.js',
+        path: '/assets/logos/node.png',
+      },
+      {
+        id: 5,
+        name: 'MongoDB',
+        path: '/assets/logos/mongodb.png',
       },
     ],
   },
