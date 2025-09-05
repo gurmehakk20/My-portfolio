@@ -104,19 +104,15 @@ export const myProjects = [
     ],
   },
   {
-    title: 'LiveDoc - Real-Time Google Docs Clone',
-    desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+    title: 'ILMKOSH - Online Book Store Web-app',
+    desc: 'ILMKOSH is an innovative online book store web application that offers a vast collection of books across various genres. Users can easily browse, search, and publisj books through a user-friendly interface.',
     subdesc:
-      'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-    texture: '/Projects/textures/project/project2.mp4',
-    logo: '/Projects/Logos/project-logo2.png',
-    logoStyle: {
-      backgroundColor: '#13202F',
-      border: '0.2px solid #17293E',
-      boxShadow: '0px 0px 60px 0px #2F6DB54D',
-    },
-    spotlight: '/Projects/Spotlight/spotlight2.png',
+      'Built using MERN stack (MongoDB, Express.js, React.js, Node.js) and TailwindCSS, ILMKOSH provides a seamless and engaging experience for book lovers.',
+    href: 'https://ilm-kosh.netlify.app/',
+    texture: '/Projects/Videos/ilmkosh.mp4',
+    logo: '/Projects/Logos/ilmkosh.jpg',
+    logoStyle: { backgroundColor: '#2A1816', border: '0.2px solid #36201D', boxShadow: '0px 0px 60px 0px #AA3C304D', },
+    spotlight: '/Projects/Spotlight/spotlight1.png',
     tags: [
       {
         id: 1,
