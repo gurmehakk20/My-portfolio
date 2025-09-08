@@ -37,7 +37,7 @@ export const clientReviews = [
     position: 'CEO of Acme Corp',
     img: '/assets/Clients/review1.png',
     review:
-      'Working with Gurmehak was a fantastic experience. She took our vision and turned it into a beautiful, functional website that perfectly represents our brand. Her attention to detail and dedication to quality is unmatched. Highly recommended!',
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur sagittis, nisl nunc.',
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const clientReviews = [
     position: 'Founder of TechGear Shop',
     img: '/assets/Clients/review2.png',
     review:
-      'Gurmehak expertise in web development is truly impressive. She delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. She’s a true professional! Fantastic work.',
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur sagittis, nisl nunc.',
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ export const clientReviews = [
     position: 'Project Manager at UrbanTech ',
     img: '/assets/Clients/review3.png',
     review:
-      'I can’t say enough good things about Gurmehak. She was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur sagittis, nisl nunc.',
   },
   {
     id: 4,
@@ -61,7 +61,8 @@ export const clientReviews = [
     position: 'CEO of BrightStar Enterprises',
     img: '/assets/Clients/review4.png',
     review:
-      'Gurmehak was a pleasure to work with. She understood our requirements perfectly and delivered a website that exceeded our expectations. Her skills in both frontend backend dev are top-notch.',
+    'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur sagittis, nisl nunc.',
+      // 'Gurmehak was a pleasure to work with. She understood our requirements perfectly and delivered a website that exceeded our expectations. Her skills in both frontend backend dev are top-notch.',
   },
 ];
 
@@ -108,7 +109,7 @@ export const myProjects = [
     desc: 'ILMKOSH is an innovative online book store web application that offers a vast collection of books across various genres. Users can easily browse, search, and publish books through a user-friendly interface.',
     subdesc:
       'Built using MERN stack (MongoDB, Express.js, React.js, Node.js) and TailwindCSS, ILMKOSH provides a seamless and engaging experience for book lovers.',
-    href: 'https://ilm-kosh.netlify.app/',
+    href: 'https://ilmkosh.vercel.app/',
     texture: '/Projects/Videos/ilmkosh.mp4',
     logo: '/Projects/Logos/ilmkosh.jpg',
     logoStyle: { backgroundColor: '#2A1816', border: '0.2px solid #36201D', boxShadow: '0px 0px 60px 0px #AA3C304D', },
