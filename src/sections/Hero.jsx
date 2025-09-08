@@ -14,6 +14,7 @@ import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
 import GirlModel from '../components/GirlModel.jsx'; // <-- Import your 3D model component
+import DownloadResume from '../components/DownloadResume.jsx';
 
 const Hero = () => {
   // Use media queries to determine screen size
@@ -43,10 +44,13 @@ const Hero = () => {
         I build interactive websites and solve challenging problems with clean, efficient code. My goal is to turn ideas into functional, user-friendly digital experiences.
       </p>
 
-      {/* Button */}
-      <a href="#about" className="mt-6 w-full sm:w-auto">
-        <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
-      </a>
+      {/* CTAs */}
+      <div className="mt-8 w-full sm:w-auto flex flex-col sm:flex-row gap-4">
+        <a href="#about" className="w-full sm:w-auto">
+          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-56 bg-gradient-to-r from-cyan-500/30 to-fuchsia-500/30 border border-white/10 hover:from-cyan-500/40 hover:to-fuchsia-500/40" />
+        </a>
+        <DownloadResume buttonClass="sm:w-fit w-full sm:min-w-44 bg-black-300 hover:bg-black-500 border border-white/10" />
+      </div>
 
     </div>
 
