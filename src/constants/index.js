@@ -276,6 +276,14 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
   {
     id: 1,
+    name: 'Pratishthan Software Ventures',
+    pos: 'SDE Intern',
+    duration: 'Septemeber 2025 - Present',
+    title: "As a Software Development Engineer Intern at Pratishthan Software Ventures, I am actively involved in learning and applying my backend development skills for UK payments projects. I am gaining hands-on experience in building and maintaining robust backend systems, collaborating with a team of experienced developers, and contributing to real-world applications that enhance my technical expertise and professional growth.",
+    icon: '/assets/logos/pratisthan.jpeg',
+  },
+  {
+    id: 2,
     name: 'OneSnack',
     pos: 'Internship - Web Developer',
     duration: 'July 2024 - Dec 2024',
@@ -284,7 +292,7 @@ export const workExperiences = [
     video: '/Projects/Videos/onesnack.mp4',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Open Source Chandigarh',
     pos: 'Technical Team Member',
     duration: 'Sept 2023 - June 2024',
