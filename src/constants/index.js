@@ -278,8 +278,8 @@ export const workExperiences = [
     id: 1,
     name: 'Pratishthan Software Ventures',
     pos: 'SDE Intern',
-    duration: 'Septemeber 2025 - Present',
-    title: "As a Software Development Engineer Intern at Pratishthan Software Ventures, I am actively involved in learning and applying my backend development skills for UK payments projects. I am gaining hands-on experience in building and maintaining robust backend systems, collaborating with a team of experienced developers, and contributing to real-world applications that enhance my technical expertise and professional growth.",
+    duration: 'September 2025 - April 2026',
+    title: "Contributed to Finacle UK CHAPS, a real-time high-value payments system that enables same-day settlement of transactions worth millions of pounds daily. Developed the Return Customer Payment functionality by implementing robust validation and idempotency checks to prevent duplicate or invalid reversals, strengthening transaction integrity and reducing operational risk. Conducted comprehensive end-to-end testing across the complete CHAPS payment workflow, increasing test coverage by 30% and ensuring high reliability and accuracy in a mission-critical banking platform.",
     icon: '/assets/logos/pratisthan.jpeg',
   },
   {
