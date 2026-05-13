@@ -1,5 +1,4 @@
-import React from "react";
-import { FaGithub, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Socials = () => {
   return (

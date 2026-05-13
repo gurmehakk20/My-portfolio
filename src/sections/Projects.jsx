@@ -30,7 +30,7 @@ const Projects = () => {
   const currentProject = myProjects[selectedProjectIndex];
 
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20" id="projects">
       <p className="head-text">My Selected Work</p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
@@ -47,26 +47,38 @@ const Projects = () => {
             <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
 
             <p className="animatedText">{currentProject.desc}</p>
-            <p className="animatedText">{currentProject.subdesc}</p>
+            {currentProject.subdesc ? <p className="animatedText">{currentProject.subdesc}</p> : null}
           </div>
 
           <div className="flex items-center justify-between flex-wrap gap-5">
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
-                <div key={index} className="tech-logo">
+                <div key={tag.id ?? index} className="tech-logo">
                   <img src={tag.path} alt={tag.name} />
                 </div>
               ))}
             </div>
 
-            <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
-              href={currentProject.href}
-              target="_blank"
-              rel="noreferrer">
-              <p>Check Live Site</p>
-              <img src="/assets/icons/arrow-up.png" alt="arrow" className="w-3 h-3" />
-            </a>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                className="flex items-center gap-2 cursor-pointer text-white-600 hover:text-white transition-colors"
+                href={currentProject.href}
+                target="_blank"
+                rel="noopener noreferrer">
+                <p>Live demo</p>
+                <img src="/assets/icons/arrow-up.png" alt="" className="w-3 h-3" />
+              </a>
+              {currentProject.github ? (
+                <a
+                  className="flex items-center gap-2 cursor-pointer text-white-600 hover:text-white transition-colors"
+                  href={currentProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <p>Source code</p>
+                  <img src="/assets/icons/arrow-up.png" alt="" className="w-3 h-3" />
+                </a>
+              ) : null}
+            </div>
           </div>
 
           <div className="flex justify-between items-center mt-7">

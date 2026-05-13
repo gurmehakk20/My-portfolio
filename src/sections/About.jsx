@@ -184,14 +184,14 @@ const About = () => {
               { lat: 40, lng: -100, text: "Chandigarh, India", color: "white", size: 15 },
             ]}
           />
-          <div className="mt-4 text-center ">
+          <div className="mt-4 text-center relative z-10">
             <p className="text-lg font-semibold text-white">
               I’m very flexible with time zone communications & locations
             </p>
             <p className="text-sm">
               I&apos;m based in Chandigarh, India and open to remote work worldwide.
             </p>
-            <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+            <Button href="#contact" name="Contact Me" isBeam containerClass="w-full mt-10" />
           </div>
         </div>
 
@@ -222,10 +222,12 @@ const About = () => {
       I enjoy exploring new technologies and enhancing my skills.
     </p>
 
-    {/* Subtle Button */}
-    <button className="mt-5 px-5 py-2 bg-cyan-500/20 backdrop-blur-md border border-cyan-400/40 text-cyan-300 rounded-xl text-sm hover:bg-cyan-500/30 transition">
+    <a
+      href="#projects"
+      className="mt-5 inline-block px-5 py-2 bg-cyan-500/20 backdrop-blur-md border border-cyan-400/40 text-cyan-300 rounded-xl text-sm hover:bg-cyan-500/30 transition"
+    >
       Explore More
-    </button>
+    </a>
   </div>
 </div>
 

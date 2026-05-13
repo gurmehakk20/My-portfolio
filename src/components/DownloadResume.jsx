@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from './Button.jsx';
 
 const DownloadResume = ({ containerClass = '', buttonClass = 'sm:w-fit w-full' }) => {

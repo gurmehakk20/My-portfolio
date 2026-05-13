@@ -1,7 +1,7 @@
 import { Html, useProgress } from '@react-three/drei';
 import React from 'react';
 
-const CanvasLoader = React.memo(() => {
+const CanvasLoader = React.memo(function CanvasLoader() {
   const { progress } = useProgress();
   return (
     <Html

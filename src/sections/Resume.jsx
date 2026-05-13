@@ -1,5 +1,3 @@
-import React from 'react';
-import Button from '../components/Button.jsx';
 import DownloadResume from '../components/DownloadResume.jsx';
 
 const Resume = () => {
