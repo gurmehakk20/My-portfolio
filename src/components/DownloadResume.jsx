@@ -1,7 +1,7 @@
 import Button from './Button.jsx';
 
 const DownloadResume = ({ containerClass = '', buttonClass = 'sm:w-fit w-full' }) => {
-  const resumeUrl = '/assets/Gurmehak_resume_webdev.pdf';
+  const resumeUrl = '/assets/Gurmehak_Kaur_SDE.pdf';
 
   return (
     <a href={resumeUrl} download className={containerClass}>

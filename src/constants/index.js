@@ -93,7 +93,7 @@ export const myProjects = [
     github: 'https://github.com/gurmehakk20/ILMKOSH',
     texture: '/Projects/Videos/ilmkosh.mp4',
     logo: '/Projects/Logos/ilmkosh.jpg',
-    logoStyle: { backgroundColor: '#2A1816', border: '0.2px solid #36201D', boxShadow: '0px 0px 60px 0px #AA3C304D', },
+    logoStyle: { backgroundColor: '#3E2C20', border: '0.2px solid #20160f', boxShadow: '0px 0px 60px 0px rgba(199, 176, 137, 0.28)', },
     spotlight: '/Projects/Spotlight/spotlight1.png',
     tags: [
       {
@@ -137,8 +137,8 @@ export const myProjects = [
     github: 'https://github.com/gurmehakk20/CompileX',
     texture: '/Projects/Videos/compileX.mp4',
     logo: '/assets/logos/compileX.png',
-    logoStyle: { backgroundColor: '#2A1816', border: '0.2px solid #36201D', boxShadow: '0px 0px 60px 0px #AA3C304D', },
-    spotlight: '/Projects/Spotlight/spotlight1.png',
+    logoStyle: { backgroundColor: '#0D205B', border: '0.2px solid #4EA5FF', boxShadow: '0px 0px 60px 0px rgba(78, 165, 255, 0.35)', },
+    spotlight: '/Projects/Spotlight/spotlight5.png',
     tags: [
     {
       id: 1,

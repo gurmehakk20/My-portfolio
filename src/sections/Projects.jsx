@@ -40,7 +40,9 @@ const Projects = () => {
           </div>
 
           <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
-            <img className="w-10 h-10 shadow-sm" src={currentProject.logo} alt="logo" />
+            <div className="w-10 h-10 flex items-center justify-center">
+              <img className="max-w-full max-h-full object-contain shadow-sm" src={currentProject.logo} alt="logo" />
+            </div>
           </div>
 
           <div className="flex flex-col gap-5 text-white-600 my-5">

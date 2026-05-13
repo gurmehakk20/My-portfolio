@@ -1,7 +1,7 @@
 import DownloadResume from '../components/DownloadResume.jsx';
 
 const Resume = () => {
-  const resumeUrl = '/assets/Gurmehak_resume_webdev.pdf';
+  const resumeUrl = '/assets/Gurmehak_Kaur_SDE.pdf';
 
   return (
     <section className="c-space my-20" id="resume">

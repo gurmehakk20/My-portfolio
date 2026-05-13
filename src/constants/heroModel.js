@@ -1,5 +1,5 @@
 /**
- * Hero 3D asset — file lives at `public/models/Desk.glb` (URL is case-sensitive on Linux hosts).
+ * Hero 3D asset — file lives at `public/models/desk.glb` (URL is case-sensitive on Linux hosts).
  * Tune these values if you swap the GLB or change how tightly it should fill the frame.
  */
 export const HERO_GLTF_PATH = '/models/Desk.glb';
