@@ -7,17 +7,20 @@ const WorkExperience = () => {
   return (
     <section className="c-space my-20" id="experience">
       <div className="w-full text-white-600">
-        <p className="head-text">My Work Experience</p>
+        <h2 className="head-text">My Work Experience</h2>
 
         <div className="work-container">
           {/* LEFT SIDE (Video instead of Developer Canvas) */}
           <div className="work-canvas flex items-center justify-center relative overflow-hidden min-h-[220px] sm:min-h-[280px]">
             {!activeVideo  ? (
               <img
-                src="/assets/logos/logo-black-nobg.png" // 👉 replace with your logo file path
-                alt="Placeholder Logo"
+                src="/assets/logos/logo-black-nobg.webp" // 👉 replace with your logo file path
+                alt="Gurmehak Kaur logo"
+                width="500"
+                height="500"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-contain p-6 cursor-pointer"
-                
               />
             ) : (
               <video
@@ -47,6 +50,10 @@ const WorkExperience = () => {
                         className="w-full h-full rounded-[50%]"
                         src={item.icon}
                         alt={`${item.name} logo`}
+                        width="128"
+                        height="128"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
 

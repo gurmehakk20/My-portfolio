@@ -1,0 +1,44 @@
+# Gurmehak Kaur — Software Engineer (Full Stack)
+
+> Portfolio of Gurmehak Kaur, a full-stack software engineer based in Bengaluru, India, working with Go, React, Next.js and Node.js, open to remote work. The site covers her projects, work experience, resume and contact details.
+
+## Pages
+
+- [Home](https://gurmehak-web-portfolio.vercel.app/#home): Introduction — "Where Code Meets Creativity".
+- [About](https://gurmehak-web-portfolio.vercel.app/#about): Background, tech stack and location.
+- [Projects](https://gurmehak-web-portfolio.vercel.app/#projects): Selected work with live demos and source code.
+- [Experience](https://gurmehak-web-portfolio.vercel.app/#experience): Internships and community roles.
+- [Contact](https://gurmehak-web-portfolio.vercel.app/#contact): Contact form (name, email, message).
+
+## Experience
+
+- Full Stack Developer Intern, Rocket Global Technologies, Bengaluru (Jun 2026 – present): end-to-end mobile recharge workflow — Next.js interfaces, backend APIs, third-party vendor and payment integrations.
+- Software Development Engineer Intern, Pratishthan Software Ventures, Bengaluru (Sep 2025 – Apr 2026): backend services and validation for UK payment systems (UKFPS, BACS, CHAPS, BCS), unit tests and CI/CD.
+- Web Developer Intern, OneSnack (Jul 2024 – Dec 2024).
+- Technical Team Member, Open Source Chandigarh (Sep 2023 – Jun 2024).
+
+## Projects
+
+- [Aarogya Care](https://aarogya-care-gamma.vercel.app/): MERN healthcare platform with JWT auth, role-based dashboards, 15+ REST APIs and Cloudinary uploads. [Admin panel](https://aarogya-care-admin.vercel.app/)
+- [CompileX](https://compilex-azure.vercel.app/): Browser-based IDE with Judge0-backed multi-language execution. Source: [GitHub](https://github.com/gurmehakk20/CompileX)
+- [ILMKOSH](https://ilmkosh.vercel.app/): Full-stack MERN online bookstore with REST APIs and validation. Source: [GitHub](https://github.com/gurmehakk20/ILMKOSH)
+- [Floralia](https://floralia.vercel.app/): Florist e-commerce front end built with React and Tailwind CSS. Source: [GitHub](https://github.com/gurmehakk20/Floralia)
+
+## Skills
+
+- Languages: Go, TypeScript, JavaScript, C++, SQL
+- Frontend: React.js, Next.js, HTML5, CSS3, Tailwind CSS, Shadcn/UI
+- Backend: Node.js, Express.js, REST APIs, JWT
+- Databases: PostgreSQL, MongoDB, MySQL, Redis
+- Infrastructure: Git, GitHub, RabbitMQ, CI/CD, Postman, Cloudinary
+
+## Education
+
+- B.E. Computer Science and Engineering, Chitkara University (2022 – 2026), CGPA 8.7/10
+
+## Resume and profiles
+
+- [Resume (PDF)](https://gurmehak-web-portfolio.vercel.app/assets/Gurmehak_Kaur_SDE.pdf)
+- [GitHub](https://github.com/gurmehakk20)
+- [LinkedIn](https://www.linkedin.com/in/gurmehak-kaur2004)
+- Email: gurmehak.codes@gmail.com

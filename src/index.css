@@ -1,4 +1,32 @@
-@import url('https://fonts.cdnfonts.com/css/general-sans');
+/* General Sans (Indian Type Foundry, ITF Free Font License) — self-hosted to avoid a render-blocking third-party stylesheet */
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -173,6 +201,50 @@ body {
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-block;
+}
+
+/* Placeholder spinner for lazy 3D scenes (see SceneFallback.jsx) */
+.scene-spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  border-top-color: #22d3ee;
+  animation: scene-spin 0.9s linear infinite;
+}
+
+@keyframes scene-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Projects copy fade-in, replayed on project change */
+.animatedText {
+  animation: fade-in 0.8s ease-in-out both;
+}
+.animatedText:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.animatedText:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-spinner,
+  .animatedText,
+  .waving-hand {
+    animation: none;
+  }
 }
 
 .arrow-gradient {

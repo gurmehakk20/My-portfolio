@@ -25,7 +25,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-5 mx-auto c-space">
           <a href="/" className="text-neutral-400 font-bold hover:text-white transition-colors ">
-            <img src="/assets/logos/logo-black-nobg.png" alt="logo" className="w-12 h-12" />
+            <img
+              src="/assets/logos/logo-black-nobg-128.webp"
+              alt="Gurmehak Kaur — home"
+              width="48"
+              height="48"
+              fetchpriority="high"
+              className="w-12 h-12"
+            />
             {/* <img src="/assets/logos/logo-nobg.png" alt="logo" className="w-12 h-12" /> */}
           
           </a>

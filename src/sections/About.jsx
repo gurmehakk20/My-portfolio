@@ -1,31 +1,21 @@
-import { useState, useRef } from "react";
-import Globe from "react-globe.gl";
-import { Canvas } from "@react-three/fiber";
-import { Html, OrbitControls, Stars } from "@react-three/drei";
+import { lazy, Suspense, useState } from "react";
 
 import Button from "../components/Button.jsx";
+import SceneBoundary from "../components/SceneBoundary.jsx";
+import SceneFallback from "../components/SceneFallback.jsx";
 import Socials from "../components/Socials.jsx";
+import useNearViewport from "../hooks/useNearViewport.js";
 
-import {
-  SiReact,
-  SiNodedotjs,
-  SiExpress,
-  SiMongodb,
-  SiMysql,
-  SiAdobephotoshop,
-  SiGithub,
-  SiGit,
-  SiFigma,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiTailwindcss,
-  SiCplusplus,
-} from "react-icons/si";
-import { FaLaptopCode } from "react-icons/fa";
+// Heavy WebGL widgets are split out and only mounted when scrolled near.
+const TechStackScene = lazy(() => import("../components/TechStackScene.jsx"));
+const GlobeView = lazy(() => import("../components/GlobeView.jsx"));
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
+  // '0px': these are the heaviest widgets (react-globe.gl alone is ~170KB gz); About always starts below a
+  // full-height hero, so they load as the visitor scrolls in rather than competing with the first paint.
+  const techStack = useNearViewport('0px');
+  const globe = useNearViewport('0px');
 
   const handleMouseMove = (e, target) => {
     const rect = target.getBoundingClientRect();
@@ -46,73 +36,10 @@ const About = () => {
     target.style.setProperty("--dy", "0px");
   };
 
-  const icons = [
-    { icon: <SiReact className="text-cyan-400" />, name: "React" },
-    { icon: <SiNodedotjs className="text-green-500" />, name: "Node.js" },
-    { icon: <SiExpress className="text-gray-300" />, name: "Express" },
-    { icon: <SiMongodb className="text-green-400" />, name: "MongoDB" },
-    { icon: <SiMysql className="text-blue-500" />, name: "MySQL / SQL" },
-    { icon: <SiAdobephotoshop className="text-blue-400" />, name: "Photoshop" },
-    { icon: <SiGithub className="text-white" />, name: "GitHub" },
-    { icon: <SiGit className="text-orange-500" />, name: "Git" },
-    { icon: <SiFigma className="text-pink-400" />, name: "Figma" },
-    { icon: <SiJavascript className="text-yellow-400" />, name: "JavaScript" },
-    { icon: <SiHtml5 className="text-orange-600" />, name: "HTML" },
-    { icon: <SiCss3 className="text-blue-500" />, name: "CSS" },
-    { icon: <SiTailwindcss className="text-cyan-400" />, name: "TailwindCSS" },
-    { icon: <SiCplusplus className="text-blue-400" />, name: "C++" },
-  ];
-
   const handleCopy = () => {
     navigator.clipboard.writeText("gurmehak.codes@gmail.com");
     setHasCopied(true);
     setTimeout(() => setHasCopied(false), 2000);
-  };
-
-  // 🔥 Scattered Icons
-  const ScatteredIcons = () => {
-    const positions = useRef(
-      icons.map(() => [
-        (Math.random() - 0.5) * 7,
-        (Math.random() - 0.5) * 4,
-        (Math.random() - 0.5) * 7,
-      ])
-    );
-
-    return (
-      <group>
-        {icons.map((item, i) => (
-          <Html
-            key={i}
-            position={positions.current[i]}
-            center
-            className="group"
-            style={{
-              fontSize: "44px",
-              transition: "transform 0.3s, filter 0.3s",
-            }}
-          >
-            {item.icon}
-            <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition">
-              {item.name}
-            </span>
-          </Html>
-        ))}
-
-        {/* Laptop in center */}
-        <Html
-          position={[0, 0, 0]}
-          center
-          style={{
-            fontSize: "64px",
-            color: "white",
-            filter: "drop-shadow(0 0 15px rgba(255,255,255,0.9))",
-          }}
-        >
-          <FaLaptopCode />
-        </Html>
-      </group>
-    );
   };
 
   return (
@@ -125,8 +52,12 @@ const About = () => {
           onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
         >
           <img
-            src="/assets/bgs/gurmehak-cartoon.png"
-            alt="profile"
+            src="/assets/bgs/gurmehak-cartoon.webp"
+            alt="Illustration of Gurmehak coding on a laptop"
+            width="800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
             className="rounded-xl aspect-[4/3] h-500 h-full object-cover object-[50%_25%]"
           />
           <div className="space-y-2">
@@ -134,8 +65,8 @@ const About = () => {
               Hi, I’m Gurmehak Kaur
             </p>
             <p className="text-sm">
-              A passionate Frontend and Backend Developer based in India,
-              specializing in creating scalable and user-friendly experiences.
+              A full-stack software engineer based in Bengaluru, India, building
+              scalable, user-friendly products with Go, React, Next.js and Node.js.
             </p>
           </div>
         </div>
@@ -146,21 +77,24 @@ const About = () => {
           onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
           onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
         >
-          <div className="w-full h-[350px] rounded-2xl ">
-            <Canvas camera={{ position: [0, 2, 8], fov: 50 }}>
-              <ambientLight intensity={0.6} />
-              <directionalLight position={[5, 5, 5]} intensity={1.2} />
-              <Stars radius={50} depth={20} count={3000} factor={4} fade />
-              <ScatteredIcons />
-              <OrbitControls enableZoom={false} enablePan={false} autoRotate={false} />
-            </Canvas>
+          <div ref={techStack.ref} className="w-full h-[350px] rounded-2xl ">
+            {techStack.hasEntered ? (
+              <SceneBoundary fallback={<SceneFallback failed />}>
+                <Suspense fallback={<SceneFallback label="Loading tech stack" />}>
+                  <TechStackScene active={techStack.isVisible} />
+                </Suspense>
+              </SceneBoundary>
+            ) : (
+              <SceneFallback label="Loading tech stack" />
+            )}
           </div>
           <div className="mt-6 text-center space-y-2">
             <p className="text-lg font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               My Tech Stack
             </p>
             <p className="text-sm">
-              My expertise includes MERN stack and UI design, with a passion for learning new technologies.
+              Go, TypeScript and the React / Next.js + Node.js stack, backed by PostgreSQL, MongoDB and Redis —
+              with a passion for learning new technologies.
             </p>
           </div>
         </div>
@@ -171,25 +105,23 @@ const About = () => {
           onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
           onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
         >
-          <Globe
-            height={300}
-            width={300}
-            backgroundColor="rgba(0, 0, 0, 0)"
-            // backgroundImageOpacity={0.5}
-            showGraticules={true}
-            // showGraticules
-            globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-            bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-            labelsData={[
-              { lat: 40, lng: -100, text: "Chandigarh, India", color: "white", size: 15 },
-            ]}
-          />
+          <div ref={globe.ref} className="h-[300px] w-[300px]">
+            {globe.hasEntered ? (
+              <SceneBoundary fallback={<SceneFallback failed />}>
+                <Suspense fallback={<SceneFallback label="Loading globe" />}>
+                  <GlobeView active={globe.isVisible} />
+                </Suspense>
+              </SceneBoundary>
+            ) : (
+              <SceneFallback label="Loading globe" />
+            )}
+          </div>
           <div className="mt-4 text-center relative z-10">
             <p className="text-lg font-semibold text-white">
               I’m very flexible with time zone communications & locations
             </p>
             <p className="text-sm">
-              I&apos;m based in Chandigarh, India and open to remote work worldwide.
+              I&apos;m based in Bengaluru, India and open to remote work worldwide.
             </p>
             <Button href="#contact" name="Contact Me" isBeam containerClass="w-full mt-10" />
           </div>
@@ -204,7 +136,7 @@ const About = () => {
   {/* Top Banner Image */}
   <div
     className="h-60 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-    style={{ backgroundImage: "url('/assets/bgs/dev.png')" }}
+    style={{ backgroundImage: "url('/assets/bgs/dev.webp')" }}
   ></div>
 
   {/* Gradient Overlay on Image */}
@@ -241,8 +173,12 @@ const About = () => {
   onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
 >
   <img
-    src="/assets/bgs/grid4.png"
-    alt="contact-banner"
+    src="/assets/bgs/grid4.webp"
+    alt=""
+    width="720"
+    height="544"
+    loading="lazy"
+    decoding="async"
     className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top rounded-lg"
   />
   <div className="mt-4 text-center space-y-2">

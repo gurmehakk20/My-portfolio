@@ -19,11 +19,14 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Read from the DOM, not state: agents filling the form (WebMCP) may set values without firing onChange.
+    const data = new FormData(formRef.current);
+
     const templateParams = {
   request_type: "Contact",
-  from_name: form.name,
-  from_email: form.email,
-  message: form.message,
+  from_name: data.get('name'),
+  from_email: data.get('email'),
+  message: data.get('message'),
   to_name: "Gurmehak",
   to_email: "gurmehak.codes@gmail.com",
 };
@@ -69,21 +72,28 @@ const Contact = () => {
 
       <div className="relative min-h-[70vh] sm:min-h-screen flex items-center justify-center flex-col">
         <img
-          src="/assets/bgs/terminal.png"
-          alt="terminal-bg"
+          src="/assets/bgs/terminal.webp"
+          alt=""
+          width="1920"
+          height="1375"
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
         <div className="contact-container">
-          <h3 className="head-text">Let&apos;s talk</h3>
+          <h2 className="head-text">Let&apos;s talk</h2>
           <p className="text-lg text-white-600 mt-3">
             Whether you’re looking to build a new website, improve your existing platform,
             or bring a unique project to life, I’m here to help.
           </p>
 
+          {/* toolname/tooldescription: declarative WebMCP hints so AI agents can use this form */}
           <form
             ref={formRef}
             onSubmit={handleSubmit}
+            toolname="contact_gurmehak"
+            tooldescription="Send Gurmehak Kaur a message with your name, email address and message."
             className="mt-12 flex flex-col space-y-7"
           >
             <label className="space-y-3">
